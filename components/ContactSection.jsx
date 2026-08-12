@@ -20,12 +20,12 @@ export default function ContactSection() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'b289e6c3-f82f-4889-a69a-de9f6666857a',
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          subject: 'New message from portfolio',
-        }),
+  access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+  name: formData.name,
+  email: formData.email,
+  message: formData.message,
+  subject: 'New message from portfolio',
+}),
       });
 
       const result = await response.json();
