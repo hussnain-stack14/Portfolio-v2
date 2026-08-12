@@ -1,0 +1,48 @@
+'use client';
+
+import { useMemo, useState } from 'react';
+import Sidebar from '@/components/Sidebar';
+import TopNav from '@/components/TopNav';
+import BottomNav from '@/components/BottomNav';
+import AboutSection from '@/components/AboutSection';
+import ResumeSection from '@/components/ResumeSection';
+import PortfolioSection from '@/components/PortfolioSection';
+import ContactSection from '@/components/ContactSection';
+import { projects } from '@/lib/data';
+
+export default function HomePage() {
+  const [activeTab, setActiveTab] = useState('about');
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'All') return projects;
+    return projects.filter((project) => project.category === activeFilter);
+  }, [activeFilter]);
+
+  return (
+    <main className="min-h-screen bg-[#0e0e10] text-zinc-200">
+      <div className="mx-auto flex min-h-screen max-w-7xl flex-col lg:flex-row">
+        <aside className="w-full border-b border-white/10 bg-[#121214]/90 p-4 backdrop-blur lg:sticky lg:top-0 lg:min-h-screen lg:w-[320px] lg:border-b-0 lg:border-r lg:p-6">
+          <Sidebar />
+        </aside>
+
+        <section className="flex-1">
+          <div className="hidden border-b border-white/10 bg-[#121214]/90 px-6 py-4 lg:block">
+            <TopNav activeTab={activeTab} onTabChange={setActiveTab} />
+          </div>
+
+          <div className="px-4 py-4 pb-24 lg:px-8 lg:py-8 lg:pb-8">
+            {activeTab === 'resume' && <ResumeSection />}
+            {activeTab === 'portfolio' && <PortfolioSection activeFilter={activeFilter} onFilterChange={setActiveFilter} filteredProjects={filteredProjects} />}
+            {activeTab === 'contact' && <ContactSection />}
+            {activeTab === 'about' && <AboutSection />}
+          </div>
+
+          <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#121214]/95 px-3 py-2 backdrop-blur lg:hidden">
+            <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
