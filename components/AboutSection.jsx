@@ -10,17 +10,16 @@ export default function AboutSection() {
       <div>
         <SectionHeading title="About Me" />
         <p className="max-w-max text-md leading-8 text-zinc-400">
-          I'm a Full Stack Web Developer who turns ideas into practical, user-focused web solutions. I specialize in{" "}
-          <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-cyan-200">
-            MongoDB, Express.js, React, Node.js
+          I'm a Full Stack Web Developer specializing in modern web applications with{" "}
+          <span className=" bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
+            Next.js, Express.js, Node.js and MongoDB
           </span>{" "} 
-          building responsive and scalable web applications.
- <br/>
- I focus on building{" "}
-          <span className="rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-cyan-200">
-           responsive interfaces, robust backend APIs, and scalable database solutions.
+          
+ . I focus on building{" "}
+          <span className="bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
+           responsive interfaces, reliable APIs, and practical solutions
           </span>
-          I enjoy turning real-world requirements into practical applications, solving technical challenges, and writing
+          that solve real business problems.
           
           
           clean, maintainable code, with modern web technologies.{" "}
