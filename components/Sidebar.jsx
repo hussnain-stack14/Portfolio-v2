@@ -4,13 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { profile, sidebarContacts } from '@/lib/data';
 import Link from 'next/link';
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="sticky top-0 w-full max-w-lg space-y-4 rounded-2xl border border-white/10 bg-[#1a1a1d] p-4 shadow-2xl shadow-black/20 sm:space-y-6 sm:p-6 lg:max-w-xl lg:p-8 xl:max-w-2xl">
-      <div className="flex items-center justify-between">
+    <div className="sticky top-0 w-full max-w-lg space-y-4 rounded-2xl border border-white/10 bg-[#1a1a1d] p-4 shadow-2xl shadow-black/20 sm:space-y-6 sm:p-6 lg:max-w-xl lg:p-8 xl:max-w-2xl items-center  justify-center">
+      <div className="flex items-center justify-between ">
         <div className="flex items-center gap-3 sm:gap-4 lg:flex-col lg:items-start">
           <div className="rounded-t-xl ml-11 relative h-16 w-16 shrink-0 overflow-hidden ring-2 ring-cyan-500/40 sm:h-24 sm:w-24 lg:h-28 lg:w-28">
             <Image
@@ -21,11 +22,11 @@ export default function Sidebar() {
               className="object-cover"
             />
           </div>
-          <div className="min-w-0">
+          <div className="min-w-0 item-center">
             <h1 className="whitespace-nowrap text-lg font-bold text-white sm:text-2xl lg:text-3xl">
               {profile.name}
             </h1>
-            <span className="mt-1 inline-flex rounded-full border border-cyan-500/40 bg-cyan-500/10 px-2 py-0.5 text-[9px] font-semibold uppercase tracking-[0.15em] text-cyan-300 sm:px-3 sm:py-1 sm:text-xs sm:tracking-[0.2em]">
+            <span className="ml-2 mt-2 text-[12px] text-center border border-cyan-500/40 bg-cyan-500/10 inline-flex rounded-full px-2 py-0.5">
               {profile.role}
             </span>
           </div>
@@ -73,7 +74,7 @@ export default function Sidebar() {
           })}
         </div>
 
-        <div className="flex gap-2 sm:gap-3">
+        <div className="flex gap-2 justify-evenly sm:gap-[10px] sm:justify-center">
           {profile.socials.map((social) => {
             const Icon = social.icon;
             return (
@@ -89,6 +90,11 @@ export default function Sidebar() {
             );
           })}
         </div>
+
+        <WhatsAppButton
+          phoneNumber="923155254877"
+          message={`Hi ${profile.name}, I found your portfolio and would like to connect!`}
+        />
       </div>
     </div>
   );
