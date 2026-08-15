@@ -14,15 +14,12 @@ export default function AboutSection() {
           <span className=" bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
             Next.js, Express.js, Node.js and MongoDB
           </span>{" "} 
-          
- . I focus on building{" "}
-          <span className="bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
-           responsive interfaces, reliable APIs, and practical solutions
-          </span>
-          that solve real business problems.
-          
-          
-          clean, maintainable code, with modern web technologies.{" "}
+          I focus on building
+           <span className="ml-1 bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
+            responsive interfaces, reliable APIs, and practical
+          </span>{" "} 
+           
+             solutions that solve real business problems, with clean and maintainable code.
         </p>
       </div>
 
@@ -43,16 +40,18 @@ export default function AboutSection() {
       </div>
 
       <div>
+        {/*
         <h3 className="mb-4 text-xl font-semibold text-white">Testimonials</h3>
         <div className="grid gap-4 md:grid-cols-2">
           {testimonials.map((item) => (
             <TestimonialCard key={item.name} item={item} />
           ))}
         </div>
+        */}
       </div>
 
       <div>
-        <h3 className="mb-4 text-xl font-semibold text-white">Clients</h3>
+        <h3 className="mb-4 text-xl font-semibold text-white">Worked With</h3>
         <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-white/10 bg-[#1a1a1d] p-4">
           {clients.map((client) => (
             <div
