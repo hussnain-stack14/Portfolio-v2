@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import SectionHeading from '@/components/SectionHeading';
-
+import { profile } from '@/lib/data';
+import WhatsAppButton from "./WhatsAppButton";
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | sending | success | error
@@ -116,6 +117,20 @@ export default function ContactSection() {
           </div>
         </form>
       </div>
+       <div className='group inline-flex items-center justify-center gap-2
+             rounded-full border border-primary
+             bg-cyan-600/5 px-6 py-3
+             text-sm font-semibold uppercase tracking-wider text-primary
+             transition-all duration-300
+             hover:bg-primary hover:text-white 
+             hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]
+             hover:-translate-y-1"'>
+        <p>Let's Work Together</p>
+        <WhatsAppButton
+          phoneNumber="923155254877"
+          message={`Hi ${profile.name}, I found your portfolio and would like to connect!`}
+        />
+       </div>
     </section>
   );
 }
