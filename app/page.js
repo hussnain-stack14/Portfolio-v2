@@ -8,10 +8,11 @@ import AboutSection from '@/components/AboutSection';
 import ResumeSection from '@/components/ResumeSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import ContactSection from '@/components/ContactSection';
+import Hero from '@/components/Hero';
 import { projects } from '@/lib/data';
 
 export default function HomePage() {
-  const [activeTab, setActiveTab] = useState('about');
+  const [activeTab, setActiveTab] = useState('home');
   const [activeFilter, setActiveFilter] = useState('All');
 
   const filteredProjects = useMemo(() => {
@@ -27,11 +28,12 @@ export default function HomePage() {
         </aside>
 
         <section className="flex-1">
-          <div className="hidden border-b border-white/10 bg-[#121214]/90 px-6 py-4 lg:block">
+          <div className="sticky top-0 z-30 hidden border-b border-white/10 bg-[#121214]/95 px-6 py-4 shadow-lg shadow-black/10 backdrop-blur lg:block">
             <TopNav activeTab={activeTab} onTabChange={setActiveTab} />
           </div>
 
-          <div className="px-4 py-4 pb-24 lg:px-8 lg:py-8 lg:pb-8">
+          <div key={activeTab} className="section-transition px-4 py-4 pb-24 lg:px-8 lg:py-8 lg:pb-8">
+            {activeTab === 'home' && <Hero onNavigate={setActiveTab} />}
             {activeTab === 'resume' && <ResumeSection />}
             {activeTab === 'portfolio' && <PortfolioSection activeFilter={activeFilter} onFilterChange={setActiveFilter} filteredProjects={filteredProjects} />}
             {activeTab === 'contact' && <ContactSection />}
