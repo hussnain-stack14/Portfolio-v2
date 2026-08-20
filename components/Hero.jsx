@@ -125,7 +125,7 @@ export default function Hero({ onNavigate }) {
 
               {/* Hero Laptop Image */}
               <Image
-                src="/images/hero-sideImage.jpg"
+                src="/images/hero-Hero-sideImage.jpg"
                 alt="Modern business website design"
                 width={1200}
                 height={800}
