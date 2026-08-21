@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Hussnain Ali | Web Developer in Faisalabad — Next.js & Custom Websites',
+  title: 'Hussnain Ali | Web Developer in Faisalabad  Next.js & Custom Websites',
   description: 'Freelance web developer in Faisalabad building fast, affordable websites for local businesses — restaurants, clinics, salons, and more. Built with Next.js, Express & MongoDB. Get a free sample homepage for your business.',
 
   icons: { icon: '/images/icon.png' },

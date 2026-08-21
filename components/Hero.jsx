@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Smartphone, Zap, Search, Briefcase, ArrowRight} from "lucide-react";
+import { Smartphone, Zap, Search, Briefcase, ArrowRight } from "lucide-react";
 
 export default function Hero({ onNavigate }) {
   return (
@@ -15,24 +15,23 @@ export default function Hero({ onNavigate }) {
             <div className="hero-reveal hero-delay-1 mx-auto mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-[#27272A] bg-[#141414] px-3.5 py-1.5 sm:mx-0 sm:rounded-md sm:px-3 sm:py-2">
               <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
               <span className="text-[10px] sm:text-xs font-semibold tracking-wider text-gray-300 uppercase">
-                FULL-STACK WEB DEVELOPER
+                WEB DEVELOPER IN FAISALABAD
               </span>
-             
             </div>
 
             {/* Heading */}
             <h1 className="hero-reveal hero-delay-2 break-words text-4xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-3xl lg:text-3xl">
-              I Build Websites That{" "}
+              I Build Websites{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-[#22D3EE] bg-clip-text text-transparent">
-                Help Businesses Grow.
+                That Help Local Businesses Grow
               </span>
             </h1>
 
             {/* Description */}
             <p className="hero-reveal hero-delay-3 mx-auto mt-5 max-w-xl text-4 leading-5 text-[#A1A1AA] sm:mx-0 sm:text-sm sm:leading-6 md:text-base md:leading-7 lg:text-lg">
-              Modern, fast and responsive websites for businesses, brands, and
-              startups  designed to build credibility, attract customers, and
-              turn visitors into clients.
+              Fast, modern, mobile-friendly websites for restaurants, clinics,
+              salons, and small businesses in Faisalabad designed to build
+              trust, attract customers, and turn visitors into clients.
             </p>
 
             {/* CTA Buttons */}
@@ -44,7 +43,7 @@ export default function Hero({ onNavigate }) {
               >
                 Let's Build Your Website
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  < ArrowRight className="h-5 w-5" />
+                  <ArrowRight className="h-5 w-5" />
                 </span>
               </button>
 
@@ -58,62 +57,60 @@ export default function Hero({ onNavigate }) {
             </div>
 
             {/* Trust / Value Indicators */}
-<div className="hero-reveal hero-delay-5 mt-10 grid w-full grid-cols-2 gap-x-4 gap-y-6 border-t border-[#27272A]/60 pt-6 sm:grid-cols-4 sm:gap-x-6">
-  
-  {/* Responsive Design */}
-  <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
-    <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
-      <Smartphone className="h-5 w-5" />
-    </div>
-    <h3 className="text-xs sm:text-sm font-medium text-white">
-      Responsive
-    </h3>
-    <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
-      Design
-    </p>
-  </div>
+            <div className="hero-reveal hero-delay-5 mt-10 grid w-full grid-cols-2 gap-x-4 gap-y-6 border-t border-[#27272A]/60 pt-6 sm:grid-cols-4 sm:gap-x-6">
+              {/* Responsive Design */}
+              <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
+                <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
+                  <Smartphone className="h-5 w-5" />
+                </div>
+                <h3 className="text-xs sm:text-sm font-medium text-white">
+                  Responsive
+                </h3>
+                <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
+                  Design
+                </p>
+              </div>
 
-  {/* Fast Performance */}
-  <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
-    <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
-      <Zap className="h-5 w-5" />
-    </div>
-    <h3 className="text-xs sm:text-sm font-medium text-white">
-      Fast
-    </h3>
-    <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
-      Performance
-    </p>
-  </div>
+              {/* Fast Performance */}
+              <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
+                <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
+                  <Zap className="h-5 w-5" />
+                </div>
+                <h3 className="text-xs sm:text-sm font-medium text-white">
+                  Fast
+                </h3>
+                <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
+                  Performance
+                </p>
+              </div>
 
-  {/* SEO-Friendly Websites */}
-  <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
-    <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
-      <Search className="h-5 w-5" />
-    </div>
-    <h3 className="text-xs sm:text-sm font-medium text-white">
-      SEO
-    </h3>
-    <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
-      Websites
-    </p>
-  </div>
+              {/* SEO-Friendly Websites */}
+              <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
+                <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
+                  <Search className="h-5 w-5" />
+                </div>
+                <h3 className="text-xs sm:text-sm font-medium text-white">
+                  SEO
+                </h3>
+                <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
+                  Websites
+                </p>
+              </div>
 
-  {/* Business Focused */}
-  <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
-    <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
-      <Briefcase className="h-5 w-5" />
-    </div>
-    <h3 className="text-xs sm:text-sm font-medium text-white">
-      Business
-    </h3>
-    <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
-      Focused
-    </p>
-  </div>
-
-</div>
-</div>
+              {/* Business Focused */}
+              <div className="group flex flex-col items-center sm:items-start text-center sm:text-left">
+                <div className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[#67E8F9]/10 text-[#67E8F9] transition-colors duration-300 group-hover:bg-[#67E8F9]/20">
+                  <Briefcase className="h-5 w-5" />
+                </div>
+                <h3 className="text-xs sm:text-sm font-medium text-white">
+                  Business
+                </h3>
+                <p className="mt-0.5 text-[11px] sm:text-xs text-[#71717A]">
+                  Focused
+                </p>
+              </div>
+            </div>
+          </div>
           {/* ================= RIGHT VISUAL ================= */}
           <div className="hero-float relative mt-2 flex items-center justify-center lg:mt-0 lg:justify-end">
             {/* Image Glow */}

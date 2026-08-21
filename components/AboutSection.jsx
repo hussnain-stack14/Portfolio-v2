@@ -9,17 +9,13 @@ export default function AboutSection() {
     <section className="space-y-8">
       <div>
         <SectionHeading title="About Me" />
-        <p className="max-w-max text-md leading-8 text-zinc-400">
-          I'm a Full Stack Web Developer specializing in modern web applications with{" "}
+        <p className="max-w-max text-lg leading-8 text-zinc-400">
+         I'm a Full Stack Web Developer based in Faisalabad, Pakistan, specializing in modern web applications with{" "}
           <span className=" bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
             Next.js, Express.js, Node.js and MongoDB
           </span>{" "} 
-          I focus on building
-           <span className="ml-1 bg-[#0e0e10] border-none rounded-full border mr-1 text-cyan-200">
-            responsive interfaces, reliable APIs, and practical
-          </span>{" "} 
-           
-             solutions that solve real business problems, with clean and maintainable code.
+         I help businesses get online with responsive, fast, and practical websites, with clean, maintainable code built to solve real business problems.
+          
         </p>
       </div>
 
