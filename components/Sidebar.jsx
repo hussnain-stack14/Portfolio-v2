@@ -13,7 +13,7 @@ export default function Sidebar() {
     <div className="sticky top-0 w-full max-w-lg space-y-4 rounded-2xl border border-white/10 bg-[#1a1a1d] p-4 shadow-2xl shadow-black/20 sm:space-y-6 sm:p-6 lg:max-w-xl lg:p-8 xl:max-w-2xl items-center  justify-center">
       <div className="flex items-center justify-between ">
         <div className="flex items-center gap-3 sm:gap-4 lg:flex-col lg:items-start">
-          <div className="rounded-t-xl ml-11 relative h-16 w-16 shrink-0 overflow-hidden ring-2 ring-cyan-500/40 sm:h-24 sm:w-24 lg:h-28 lg:w-28">
+          <div className="rounded-t-xl  relative h-16 w-16 shrink-0 overflow-hidden ring-2 ring-cyan-500/40 sm:h-24 sm:w-24 lg:h-40 lg:w-40 lg:ml-6">
             <Image
               src={profile.image}
               alt={profile.name}
@@ -26,7 +26,7 @@ export default function Sidebar() {
             <h1 className="whitespace-nowrap text-lg font-bold text-white sm:text-2xl lg:text-3xl">
               {profile.name}
             </h1>
-            <span className="ml-2 mt-2 text-[12px] text-center border border-cyan-500/40 bg-cyan-500/10 inline-flex rounded-full px-2 py-0.5">
+            <span className="ml-2 mt-2 text-[12px] text-center border border-cyan-400 bg-cyan-400/4 inline-flex rounded-md px-2 py-0.5">
               {profile.role}
             </span>
           </div>
@@ -60,7 +60,7 @@ export default function Sidebar() {
                 key={item.label}
                 className="flex w-full items-center gap-3 rounded-xl border border-white/10 bg-black/20 px-3 py-3 text-xs text-zinc-400 sm:px-4 sm:py-4 sm:text-sm"
               >
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-500/15 text-cyan-300 sm:h-10 sm:w-10">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-400 sm:h-10 sm:w-10">
                   {Icon && <Icon className="h-4 w-4 sm:h-5 sm:w-5" />}
                 </div>
                 <div className="min-w-0 flex-1">
