@@ -1,13 +1,17 @@
 import Image from "next/image";
 import { Smartphone, Zap, Search, Briefcase, ArrowRight } from "lucide-react";
+import VantaNetBackground from "./VantaNetBackground";
 
 export default function Hero({ onNavigate }) {
   return (
     <section className="relative flex min-h-[calc(100svh-80px)] items-center overflow-hidden bg-[#1a1a1d] py-10 text-white sm:py-14 lg:min-h-[calc(100vh-80px)] lg:py-10">
-      {/* Background Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[120px] sm:blur-[140px]" />
+      {/* Vanta 3D Network Background */}
+      <VantaNetBackground />
 
-      <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
+      {/* Background Glow */}
+      <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[300px] w-[300px] sm:h-[500px] sm:w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/5 blur-[120px] sm:blur-[140px]" />
+
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid w-full items-center gap-12 lg:grid-cols-2 lg:gap-14">
           {/* ================= LEFT CONTENT ================= */}
           <div className="mx-auto w-full max-w-2xl min-w-0 text-center sm:text-left lg:mx-0">
@@ -111,6 +115,7 @@ export default function Hero({ onNavigate }) {
               </div>
             </div>
           </div>
+
           {/* ================= RIGHT VISUAL ================= */}
           <div className="hero-float relative mt-2 flex items-center justify-center lg:mt-0 lg:justify-end">
             {/* Image Glow */}
